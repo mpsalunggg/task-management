@@ -1,5 +1,12 @@
 # Task Management System
 
+<div align="center">
+  <img src="public/readme.png" alt="Task Management System - Main View" width="100%" />
+  <img src="public/readme2.png" alt="Task Management System - Board View" width="100%" />
+</div>
+
+<br />
+
 A modern, intuitive task management application built with React and TypeScript. Organize your work, boost your productivity, and achieve your goals with drag-and-drop functionality.
 
 ## Features
@@ -126,11 +133,3 @@ VITE_API_BASE_URL=your_api_base_url_here
 - Mobile-first approach
 - Breakpoints: 640px (sm), 768px (md), 1024px (lg), 1280px (xl)
 - Adaptive layouts for different screen sizes
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
