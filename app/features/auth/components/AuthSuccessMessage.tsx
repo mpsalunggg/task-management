@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const AuthSuccessMessage = styled.div`
   padding: 0.75rem 1rem;
-  background-color: #dcfce7;
-  border: 1px solid #bbf7d0;
+  background-color: ${({ theme }) => theme.colors.successLight};
+  border: 1px solid ${({ theme }) => theme.colors.success};
   border-radius: 0.5rem;
-  color: #16a34a;
+  color: ${({ theme }) => theme.colors.success};
   font-size: 0.875rem;
   margin-bottom: 1rem;
 `

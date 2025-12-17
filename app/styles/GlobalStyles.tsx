@@ -12,8 +12,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
-    color: #111827;
-    background-color: #f9fafb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: ${({ theme }) => theme.colors.background.secondary};
   }
 
   #root {
@@ -23,5 +24,15 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  input,
+  textarea,
+  select {
+    font-family: inherit;
   }
 `

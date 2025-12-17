@@ -5,6 +5,6 @@ export const AuthContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3f4f6;
+  background-color: ${({ theme }) => theme.colors.background.secondary};
   padding: 1rem;
 `
