@@ -8,3 +8,6 @@ export {
   CardContent,
   CardFooter,
 } from './Card'
+export { Modal } from './Modal'
+export { Select } from './Select'
+export { TextArea } from './TextArea'

@@ -42,19 +42,19 @@ const initializeData = () => {
   if (users.size === 0) {
     const admin: User = {
       id: '1',
-      username: 'admin',
-      email: 'admin@example.com',
-      password: hashPasswordInternal('admin123'),
-      name: 'Administrator',
+      username: 'user1',
+      email: 'user1@gmail.com',
+      password: hashPasswordInternal('user1123'),
+      name: 'User one',
       createdAt: '2024-01-15T09:00:00Z',
     }
 
     const user1: User = {
       id: '2',
-      username: 'user1',
-      email: 'user1@example.com',
-      password: hashPasswordInternal('password123'),
-      name: 'User One',
+      username: 'user2',
+      email: 'user2@gmail.com',
+      password: hashPasswordInternal('user2123'),
+      name: 'User two',
       createdAt: '2024-01-15T09:30:00Z',
     }
 
@@ -78,7 +78,7 @@ const initializeData = () => {
       description: 'Buat sistem autentikasi dengan user data',
       status: 'in-progress',
       priority: 'high',
-      userId: '1',
+      userId: '2',
       createdAt: '2024-01-15T11:00:00Z',
       updatedAt: '2024-01-15T11:00:00Z',
     }
@@ -110,14 +110,6 @@ export const hashPassword = hashPasswordInternal
 export const verifyPassword = verifyPasswordInternal
 
 export const userStorage = {
-  getAll: (): User[] => {
-    return Array.from(users.values())
-  },
-
-  getById: (id: string): User | undefined => {
-    return users.get(id)
-  },
-
   getByUsername: (username: string): User | undefined => {
     return Array.from(users.values()).find((u) => u.username === username)
   },
@@ -129,19 +121,6 @@ export const userStorage = {
   create: (user: User): User => {
     users.set(user.id, user)
     return user
-  },
-
-  update: (id: string, updates: Partial<User>): User | undefined => {
-    const user = users.get(id)
-    if (!user) return undefined
-
-    const updatedUser = { ...user, ...updates }
-    users.set(id, updatedUser)
-    return updatedUser
-  },
-
-  delete: (id: string): boolean => {
-    return users.delete(id)
   },
 
   exists: (username: string, email: string): boolean => {

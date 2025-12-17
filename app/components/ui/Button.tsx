@@ -16,22 +16,22 @@ export const Button = styled.button<ButtonProps>`
   padding: ${(props) => {
     switch (props.$size) {
       case 'sm':
-        return '0.5rem 1rem'
+        return '0.375rem 0.75rem'
       case 'lg':
-        return '1rem 2rem'
+        return '0.875rem 1.75rem'
       default:
-        return '0.75rem 1.5rem'
+        return '0.625rem 1.25rem'
     }
   }};
 
   font-size: ${(props) => {
     switch (props.$size) {
       case 'sm':
-        return '0.875rem'
+        return '0.8125rem'
       case 'lg':
-        return '1.125rem'
-      default:
         return '1rem'
+      default:
+        return '0.9375rem'
     }
   }};
 
@@ -108,6 +108,10 @@ export const Button = styled.button<ButtonProps>`
     outline: 2px solid #3b82f6;
     outline-offset: 2px;
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 `
 
 Button.defaultProps = {

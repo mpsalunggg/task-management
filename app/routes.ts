@@ -4,6 +4,7 @@ export default [
   index('routes/home.tsx'),
   route('login', 'routes/auth/login.tsx'),
   route('register', 'routes/auth/register.tsx'),
+  route('task', 'routes/task.tsx'),
 
   route('api/auth/register', 'routes/api/auth/register.ts'),
   route('api/auth/login', 'routes/api/auth/login.ts'),

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '~/styles/Theme'
 
 interface InputProps {
   $hasError?: boolean
@@ -11,17 +12,15 @@ export const Input = styled.input<InputProps>`
   font-family: inherit;
   transition: all 0.2s ease-in-out;
 
-  padding: 0.45rem 1rem;
-  font-size: 1rem;
-
+  padding: 0.75rem 1rem;
   width: ${(props) => (props.$fullWidth ? '100%' : 'auto')};
 
-  border: 2px solid ${(props) => (props.$hasError ? '#ef4444' : '#e5e7eb')};
-  border-radius: 0.5rem;
-
+  font-size: ${({ theme }) => theme.fontSize.base};
+  border: 1px solid
+    ${(props) => (props.$hasError ? '#ef4444' : theme.colors.gray[300])};
+  border-radius: ${({ theme }) => theme.radius.md};
   background-color: white;
-
-  color: #111827;
+  color: ${({ theme }) => theme.colors.gray[900]};
 
   &::placeholder {
     color: #9ca3af;
