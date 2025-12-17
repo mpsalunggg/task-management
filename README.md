@@ -1,8 +1,8 @@
 # Task Management System
 
-<div align="center">
-  <img src="public/readme.png" alt="Task Management System - Main View" width="100%" />
-  <img src="public/readme2.png" alt="Task Management System - Board View" width="100%" />
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+  <img src="public/readme.png" alt="Task Management System - Main View" style="width: 100%;" />
+  <img src="public/readme2.png" alt="Task Management System - Board View" style="width: 100%;" />
 </div>
 
 <br />
