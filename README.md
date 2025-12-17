@@ -1,87 +1,136 @@
-# Welcome to React Router!
+# Task Management System
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern, intuitive task management application built with React and TypeScript. Organize your work, boost your productivity, and achieve your goals with drag-and-drop functionality.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **Task Management** - Create, update, and track your tasks with ease
+- **Secure Authentication** - Your data is protected with JWT authentication
+- **Drag and Drop** - Easily organize and prioritize your tasks with intuitive drag and drop
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Real-time Updates** - Optimistic UI updates for better user experience
 
-## Getting Started
+## Tech Stack
 
-### Installation
+### Frontend
+- **React 19.2.3** - A JavaScript library for building user interfaces
+- **React Router 7.10.1** - Declarative routing for React applications
+- **TypeScript** - Static type checking for JavaScript
+- **Styled Components 6.1.19** - CSS-in-JS styling with theme support
+- **React Hook Form 7.68.0** - Performant, flexible forms with validation
 
-Install the dependencies:
+### Drag and Drop
+- **@dnd-kit/core** - Modern drag and drop toolkit for React
+- **@dnd-kit/utilities** - Utility functions for drag and drop
 
+### UI/UX
+- **Lucide React 0.561.0** - Beautiful, consistent icon library
+
+### Authentication
+- **jwt-decode 4.0.0** - Client-side JWT token decoding
+- **Axios** - HTTP client for API requests
+
+## Prerequisites
+
+Before running this project, make sure you have:
+
+- **Node.js** (version 20 or higher)
+- **pnpm** (recommended) or npm
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm install
+git clone <repository-url>
+cd task-management
 ```
 
-### Development
-
-Start the development server with HMR:
-
+2. Install dependencies:
 ```bash
-npm run dev
+pnpm install
 ```
 
-Your application will be available at `http://localhost:5173`.
+## Running the Project
 
-## Building for Production
+### Development Mode
+
+Start the development server:
+
+```bash
+pnpm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+### Build for Production
 
 Create a production build:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
-## Deployment
+### Preview Production Build
 
-### Docker Deployment
-
-To build and run using Docker:
+Preview the production build locally:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+pnpm run start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+task-management/
+├── app/
+│   ├── components/         # Reusable UI components
+│   │   └── ui/             # Base UI components (Button, Input, Modal, etc.)
+│   ├── features/           # Feature-based modules
+│   │   ├── auth/           # Authentication features
+│   │   ├── home/           # Home page and landing
+│   │   └── task/           # Task management features
+│   │       ├── components/ # Task-specific components
+│   │       ├── context/    # Task context for state management
+│   │       ├── pages/      # Task pages
+│   │       └── types/      # TypeScript type definitions
+│   ├── lib/                # Utility functions and configurations
+│   ├── routes/             # Route definitions
+│   └── styles/             # Global styles and theme
+├── public/                 # Static assets
+└── README.md               # Project documentation
 ```
 
-## Styling
+## Environment Variables
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Create a `.env` file in the root directory (if needed):
 
----
+```env
+VITE_API_BASE_URL=your_api_base_url_here
+```
 
-Built with ❤️ using React Router.
+## Key Features Details
+
+### Authentication
+- Login and registration with JWT tokens
+- Protected routes for authenticated users
+- Token-based session management
+
+### Task Management
+- Create, read, update, and delete tasks
+- Organize tasks by status: To Do, In Progress, Completed
+- Drag and drop tasks between columns
+- Priority levels: Low, Medium, High
+- Task descriptions and metadata
+
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: 640px (sm), 768px (md), 1024px (lg), 1280px (xl)
+- Adaptive layouts for different screen sizes
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

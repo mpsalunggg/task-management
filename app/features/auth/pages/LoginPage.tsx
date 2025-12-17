@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router'
 import {
   Button,
   Input,
+  PasswordInput,
   InputLabel,
   InputError,
   InputGroup,
@@ -93,12 +94,10 @@ export function LoginPage() {
 
             <InputGroup>
               <InputLabel htmlFor="password">Password</InputLabel>
-              <Input
+              <PasswordInput
                 id="password"
-                type="password"
                 placeholder="Enter your password"
                 $hasError={!!errors.password}
-                $fullWidth
                 {...register('password', {
                   required: 'Password is required',
                   minLength: {

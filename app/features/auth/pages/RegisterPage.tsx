@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router'
 import {
   Button,
   Input,
+  PasswordInput,
   InputLabel,
   InputError,
   InputGroup,
@@ -154,12 +155,10 @@ export function RegisterPage() {
 
             <InputGroup>
               <InputLabel htmlFor="password">Password</InputLabel>
-              <Input
+              <PasswordInput
                 id="password"
-                type="password"
                 placeholder="Enter your password"
                 $hasError={!!errors.password}
-                $fullWidth
                 disabled={isLoading}
                 {...register('password', {
                   required: 'Password is required',
@@ -178,12 +177,10 @@ export function RegisterPage() {
               <InputLabel htmlFor="confirmPassword">
                 Confirm Password
               </InputLabel>
-              <Input
+              <PasswordInput
                 id="confirmPassword"
-                type="password"
                 placeholder="Confirm your password"
                 $hasError={!!errors.confirmPassword}
-                $fullWidth
                 disabled={isLoading}
                 {...register('confirmPassword', {
                   required: 'Please confirm your password',

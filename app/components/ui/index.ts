@@ -1,5 +1,6 @@
 export { Button } from './Button'
 export { Input, InputLabel, InputError, InputGroup } from './Input'
+export { PasswordInput } from './PasswordInput'
 export {
   Card,
   CardHeader,
