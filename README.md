@@ -9,6 +9,15 @@
 
 A modern, intuitive task management application built with React and TypeScript. Organize your work, boost your productivity, and achieve your goals with drag-and-drop functionality.
 
+## Demo Accounts
+
+For testing purposes, you can use the following demo accounts:
+
+| Username | Password  |
+|----------|-----------|
+| user1    | user1123  |
+| user2    | user2123  |
+
 ## Features
 
 - **Task Management** - Create, update, and track your tasks with ease
