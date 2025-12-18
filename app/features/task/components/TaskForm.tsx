@@ -102,8 +102,14 @@ export function TaskForm({
           id="description"
           placeholder="Enter task description"
           disabled={isLoading}
-          {...register('description')}
+          $hasError={!!errors.description}
+          {...register('description', {
+            required: 'Description is required',
+          })}
         />
+        {errors.description && (
+          <InputError>{errors.description.message}</InputError>
+        )}
       </InputGroup>
 
       <InputGroup>
